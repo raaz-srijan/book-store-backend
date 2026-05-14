@@ -1,8 +1,10 @@
 import {Router} from "express";
 import { RoleController } from "./role.controller.js";
+import { protect } from "../../shared/middlewares/auth.middleware.js";
+import { restrictTo } from "../../shared/middlewares/rbac.middleware.js";
 
 const route = Router();
 
-route.post("/add", RoleController.addRole);
+route.post("/add", protect, restrictTo("admin"), RoleController.addRole);
 
 export default route;
