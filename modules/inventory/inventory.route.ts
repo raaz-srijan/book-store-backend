@@ -1,7 +1,11 @@
 import { Router } from "express";
 import { InventoryController } from "./inventory.controller.js";
+import { protect } from "../../shared/middlewares/auth.middleware.js";
+import { restrictTo } from "../../shared/middlewares/rbac.middleware.js";
 
 const route = Router();
+
+route.use(protect, restrictTo("admin", "vendor"));
 
 // Dashboard & General
 route.get("/alerts/low-stock", InventoryController.getLowStock);
