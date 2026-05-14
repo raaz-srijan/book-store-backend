@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/multer": "^2.1.0",
+    "bcrypt": "^6.0.0",
+    "cloudinary": "^2.10.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "init": "^0.1.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.6.2",
+    "multer": "^2.1.1",
+    "path": "^0.12.7",
+    "slugify": "^1.6.9",
+    "tsx": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.7.0",
+    "typescript": "^6.0.3"
+  },
+  "name": "v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
