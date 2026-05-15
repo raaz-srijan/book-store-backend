@@ -19,6 +19,9 @@ app.use("/api/v1/auth", route.authRoute);
 app.use("/api/v1/authors", route.authorRoute);
 app.use("/api/v1/category", route.categoryRoute);
 app.use("/api/v1/genre", route.genreRoute);
+app.use("/api/v1/books", route.bookRoute);
+app.use("/api/v1/inventory", route.inventoryRoute);
+app.use("/api/v1/vendors", route.vendorRoute);
 
 app.use(globalErrorHandler);
 

@@ -17,7 +17,13 @@ export const protect = async (req: Request, res: Response, next: NextFunction) =
 
         const decoded = verifyJWT(token) as { id: string };
 
-        const currentUser = await User.findById(decoded.id).populate("roleId");
+        const currentUser = await User.findById(decoded.id).populate({
+            path: "roleId",
+            populate: {
+                path: "permissions",
+                model: "Permission"
+            }
+        });
 
         if (!currentUser) {
              return next(new AppError("User no longer exists.", 401));
